@@ -2,7 +2,7 @@
 
 int main()
 {
-    int i, x, y, n=1, t, c;
+    int i, x, y, n=1, t, c, a, v[5];
     while(n==1)
     {
         c=1;
@@ -45,8 +45,40 @@ int main()
                 }
                 printf("El factorial de %d es: %d", y, c);
             }
+            break;
+        case 4:
+            {
+                c=0;
+                a=0;
+                printf("Ingrese numero: ");
+                scanf("%d", &y);
+                for(i=1;i<=y;i=c)
+                {
+                    c= i+a;
+                    if(c<=y)
+                    {
+                       printf("%d + %d = %d\n", a, i, c);
+                    }
+                    a=i;
+                }
+            }
+            break;
+        case 5:
+            {
+                for(i=0;i<5;i++)
+                {
+                    printf("Ingrese numero: ");
+                    scanf("%d", &v[i]);
+                }
+                for(i=0;i<5;i++)
+                {
+                    printf("%d ", v[i]);
+                }
+            }
         }
-        n=0;
+        printf("\nDesea realizar otra operacion 1.SI  2.NO ");
+        scanf("%d", &n);
+        system("cls");
     }
     return 0;
 }
