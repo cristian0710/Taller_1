@@ -3,11 +3,12 @@
 
 int main()
 {
-    int i, n=0, a, z, y, e;
+    int i, n=1, a, z, y, e;
     float x[4];
 
-    while(n==0)
+    while(n==1)
     {
+        system("cls");
         printf("1: array de 4 numeros decimales\n");
         printf("2: Arreglo bidimensional\n");
         printf("3: array 4x4\n");
@@ -91,9 +92,14 @@ int main()
                         }
                     }
                 }
+                else
+                {
+                    printf("Seleccione la opcion correcta");
+                }
             }
         }
-        n=1;
+        printf("\nDesea realizar otra operacion 1.SI o 2.NO: ");
+        scanf("%d", &n);
     }
 
 
