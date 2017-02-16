@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <time.h>
+
+
 
 int main()
 {
@@ -7,6 +10,7 @@ int main()
 
     while(a==1)
     {
+        system("cls");
         printf("1. Imprimir el mes del sistemas\n");
         printf("2. vocales en codigo ascii\n");
         printf("3. codigo ascii de los numeros del 0-9\n");
@@ -15,6 +19,90 @@ int main()
 
         switch(x)
         {
+        case 1:
+            {
+                struct tm *tiempo;
+                int dia;
+                int mes;
+                int anio;
+
+                time_t fecha_sistema;
+                time(&fecha_sistema);
+                tiempo=localtime(&fecha_sistema);
+
+                anio=tiempo->tm_year + 1900;
+                mes=tiempo->tm_mon + 1;
+                dia=tiempo->tm_mday;
+
+                /*printf("Dia: %d",dia);
+                printf("Mes: %d",mes);
+                printf("Año: %d",anio);
+                return 0;*/
+                switch(mes)
+                {
+                case 1:
+                    {
+                        printf("Enero");
+                    }
+                    break;
+                case 2:
+                    {
+                        printf("Febrero");
+                    }
+                    break;
+                case 3:
+                    {
+                        printf("Marzo");
+                    }
+                    break;
+                case 4:
+                    {
+                        printf("Abril");
+                    }
+                    break;
+                case 5:
+                    {
+                        printf("Mayo");
+                    }
+                    break;
+                case 6:
+                    {
+                        printf("Junio");
+                    }
+                    break;
+                case 7:
+                    {
+                        printf("Julio");
+                    }
+                    break;
+                case 8:
+                    {
+                        printf("Agosto");
+                    }
+                    break;
+                case 9:
+                    {
+                        printf("Septiembre");
+                    }
+                    break;
+                case 10:
+                    {
+                        printf("Octubre");
+                    }
+                    break;
+                case 11:
+                    {
+                        printf("Noviembre");
+                    }
+                    break;
+                case 12:
+                    {
+                        printf("Diciembre");
+                    }
+                    break;
+                }
+            }
+            break;
         case 2:
             {
                 printf("ingrese vocal: ");
